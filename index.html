@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saboplume — Produits Fermiers & Événementiel · Bimbo</title>
+  <meta name="description" content="Saboplume, votre référence à Bimbo pour les produits fermiers, le traiteur et la location événementielle." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-logo">
+    <img src="https://i.ibb.co/C3NkLpLY/logo-officiel-saboplume.png" alt="Saboplume" />
+    <span>Saboplume</span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#qui">Qui sommes-nous</a></li>
+    <li><a href="#valeurs">Valeurs</a></li>
+    <li><a href="#produits">Produits</a></li>
+    <li><a href="#traiteur">Traiteur</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#temoignages">Témoignages</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-cart" onclick="openCart()">🛒 Panier <span class="cart-count" id="cartCountNav">0</span></button>
+    <button class="btn-order-nav" onclick="openCommander()">Commander</button>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="accueil">
+  <div class="hero-badge">🌿 Bimbo · République Centrafricaine</div>
+  <h1>« À vos côtés pour<br/><em>chaque occasion</em> »</h1>
+  <p class="hero-sub">Produits fermiers de qualité, traiteur événementiel et location de matériel — directement depuis notre ferme de Bimbo.</p>
+  <div class="hero-ctas">
+    <button class="btn-primary" onclick="document.getElementById('produits').scrollIntoView({behavior:'smooth'})">Voir nos produits</button>
+    <button class="btn-secondary" onclick="openContactModal()">Nous contacter</button>
+  </div>
+  <div class="hero-cards">
+    <div class="hero-card"><div class="icon">🐓</div><h4>Produits Fermiers</h4><p>Volailles, caprins & œufs</p></div>
+    <div class="hero-card"><div class="icon">🍽️</div><h4>Traiteur</h4><p>Événements sur mesure</p></div>
+    <div class="hero-card"><div class="icon">🎪</div><h4>Location</h4><p>Chaises, tentes & plus</p></div>
+  </div>
+</section>
+
+<!-- QUI SOMMES-NOUS -->
+<section id="qui">
+  <div class="qui-image">
+    <img src="IMG-20250716-WA0005.jpg" alt="jean-marie Karemamana" loading="lazy" />
+    <div class="badge fondateur"><strong>jean-marie karemamana</strong><span> Fondateur</span></div>
+    <img src="https://i.ibb.co/sJw0Swdr/IMG-1939.png" alt="Bélinda Songuet" loading="lazy" />
+    <div class="badge co-fondatrice"><strong>Bélinda Songuet</strong><span> co-Fondatrice & Gérante</span></div>
+  </div>
+  <div>
+    <span class="section-label">Qui sommes-nous</span>
+    <h2 class="section-title">À vos côtés pour<br/><em>chaque occasion</em></h2>
+    <p class="section-desc">Saboplume, votre référence à Bimbo, vous accompagne dans l'organisation de vos événements et dans votre quotidien grâce à des produits fermiers soigneusement sélectionnés.</p>
+    <p style="font-size:0.85rem;color:var(--text-light);margin-top:1rem;">Saboplume est une EURL créée à Bimbo en 2025 par Bélinda Songuet, avec une ambition claire : proposer des produits fermiers de qualité et des services adaptés aux besoins des habitants de Bimbo et ses environs.</p>
+    <div class="qui-steps">
+      <div class="qui-step"><span class="num">1</span><div><h4>Produits Fermiers de Qualité</h4><p>Volaille, caprins et œufs frais issus d'un élevage soigné</p></div></div>
+      <div class="qui-step"><span class="num">2</span><div><h4>Service Traiteur Professionnel</h4><p>Mariages, baptêmes, anniversaires — chaque événement mérite l'excellence</p></div></div>
+      <div class="qui-step"><span class="num">3</span><div><h4>Location Événementielle</h4><p>Chaises, tentes, tables et matériel, livrés et repris selon vos besoins</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VALEURS -->
+<div style="padding: 0 2rem;">
+  <section id="valeurs" style="max-width:1200px;margin:0 auto;border-radius:24px;">
+    <span class="section-label">Nos Valeurs</span>
+    <h2 class="section-title" style="color:white;">Ce qui nous guide <em style="color:var(--gold-light)">chaque jour</em></h2>
+    <div class="valeurs-grid">
+      <div class="valeur-card"><div class="valeur-icon">🌿</div><h3>Authenticité</h3><p>Des produits naturels, élevés avec respect et sans compromis sur la qualité.</p></div>
+      <div class="valeur-card"><div class="valeur-icon">🤝</div><h3>Confiance</h3><p>Des relations durables fondées sur la transparence et le respect de nos engagements.</p></div>
+      <div class="valeur-card"><div class="valeur-icon">⭐</div><h3>Excellence</h3><p>Nous visons la qualité dans tout ce que nous faisons : produits, traiteur, location.</p></div>
+      <div class="valeur-card"><div class="valeur-icon">💚</div><h3>Bienveillance</h3><p>Chaque client et animal confié à nos soins est traité avec respect et humanité.</p></div>
+      <div class="valeur-card"><div class="valeur-icon">🇨🇫</div><h3>Engagement Local</h3><p>Fiers d'être centrafricains, nous privilégions les ressources et talents locaux.</p></div>
+      <div class="valeur-card"><div class="valeur-icon">💡</div><h3>Innovation</h3><p>Nous cherchons en permanence à améliorer nos services pour mieux vous servir.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== PRODUITS FERMIERS ===================== -->
+<section id="produits">
+  <div class="produits-header">
+    <span class="section-label">Produits Fermiers</span>
+    <h2 class="section-title">Nourrir avec <em>authenticité</em></h2>
+    <p class="section-desc">Des produits frais et sains directement de notre ferme.</p>
+  </div>
+
+  <!-- ŒUFS -->
+  <div class="produit-cat-title">🥚 Œufs</div>
+  <div class="products-grid">
+
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://i.ibb.co/7N0YkPLf/IMG-2132-JPG.jpg" alt="Palette de 30 œufs" loading="lazy"/>
+        <span class="product-badge">Disponible</span>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Palette de 30 œufs</div>
+        <div class="product-desc">Production régulière de notre élevage, disponible tous les jours.</div>
+        <div class="product-footer"><span class="product-price">1 000 FCFA</span><button class="btn-add" onclick="addToCart('Palette de 30 œufs', 1000)">+ Ajouter</button></div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">
+        <img src="Capture d’écran du 2026-03-03 18-42-58.png" alt="Demi-palette de 15 œufs" loading="lazy"/>
+        <span class="product-badge">Disponible</span>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Demi-palette (15 œufs)</div>
+        <div class="product-desc">Idéal pour les petites familles. Œufs frais du jour, ramassés le matin même.</div>
+        <div class="product-footer"><span class="product-price">550 FCFA</span><button class="btn-add" onclick="addToCart('Demi-palette 15 œufs', 550)">+ Ajouter</button></div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">
+        <img src="images (5).jpeg" alt="Lot de 6 palettes (180 œufs)" loading="lazy"/>
+        <span class="product-badge limited">Limité</span>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Lot 6 palettes (180 œufs)</div>
+        <div class="product-desc">Tarif avantageux pour revendeurs et restaurateurs. Livraison incluse à Bimbo.</div>
+        <div class="product-footer"><span class="product-price">5 400 FCFA</span><button class="btn-add" onclick="addToCart('Lot 6 palettes 180 œufs', 5400)">+ Ajouter</button></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- VOLAILLES -->
+  <div class="produit-cat-title">🐓 Volailles</div>
+  <div class="products-grid">
+
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://i.ibb.co/1YDS9Yyp/Whats-App-Image-2026-02-21-at-09-08-05-Copie.jpg" alt="Segue Kondo" loading="lazy"/>
+        <span class="product-badge">Disponible</span>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Segue Kondo</div>
+        <div class="product-desc">Race résistante, adaptée aux conditions locales. Elevé en plein air.</div>
+        <div class="product-footer"><span class="product-price">3 500 FCFA</span><button class="btn-add" onclick="addToCart('Segue Kondo', 3500)">+ Ajouter</button></div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://i.ibb.co/99DP49ZM/Whats-App-Image-2026-02-21-at-09-44-24-Copie.jpg" alt="Kondo Ti Kodro" loading="lazy"/>
+        <span class="product-badge">Disponible</span>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Kondo ti Kodro</div>
+        <div class="product-desc">Variété robuste, idéale pour reproduction et production. Chair savoureuse.</div>
+        <div class="product-footer"><span class="product-price">4 500 FCFA</span><button class="btn-add" onclick="addToCart('Kondo Ti Kodro', 4500)">+ Ajouter</button></div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">
+        <img src="téléchargement.jpeg" alt="Poulet de Chair" loading="lazy"/>
+        <span class="product-badge">Disponible</span>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Poulet de Chair</div>
+        <div class="product-desc">Poulet élevé naturellement, prêt à cuisiner. Idéal pour grillades et sauces.</div>
+        <div class="product-footer"><span class="product-price">5 000 FCFA</span><button class="btn-add" onclick="addToCart('Poulet de Chair', 5000)">+ Ajouter</button></div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">
+        <img src="Allier-canards.jpg" alt="Canard Fermier" loading="lazy"/>
+        <span class="product-badge">Disponible</span>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Canard Fermier</div>
+        <div class="product-desc">Canard élevé en liberté. Chair généreuse, parfait pour les repas de fête.</div>
+        <div class="product-footer"><span class="product-price">7 000 FCFA</span><button class="btn-add" onclick="addToCart('Canard Fermier', 7000)">+ Ajouter</button></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CAPRINS -->
+  <div class="produit-cat-title">🐐 Caprins</div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://i.ibb.co/LzmPdfvr/Whats-App-Image-2026-02-21-at-09-40-18.jpg" alt="Kete Ngassa" loading="lazy"/>
+        <span class="product-badge">Disponible</span>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Kete Ngassa</div>
+        <div class="product-desc">Jeune chevreau en bonne santé, élevé dans de bonnes conditions.</div>
+        <div class="product-footer"><span class="product-price">50 000 FCFA</span><button class="btn-add" onclick="addToCart('Kete Ngassa', 50000)">+ Ajouter</button></div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://i.ibb.co/rP7B9Mq/Whats-App-Image-2026-02-21-at-09-40-19-Copie.jpg" alt="Kota Ngassa" loading="lazy"/>
+        <span class="product-badge">Disponible</span>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Kota Ngassa</div>
+        <div class="product-desc">Chèvres plus développées, robustes et en pleine forme.</div>
+        <div class="product-footer"><span class="product-price">70 000 FCFA</span><button class="btn-add" onclick="addToCart('Kota Ngassa', 70000)">+ Ajouter</button></div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">
+        <img src="Champion21.jpg" alt="Bélier reproducteur" loading="lazy"/>
+        <span class="product-badge">Disponible</span>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Bélier reproducteur</div>
+        <div class="product-desc">Mâle adulte en bonne santé, idéal pour améliorer un troupeau existant.</div>
+        <div class="product-footer"><span class="product-price">90 000 FCFA</span><button class="btn-add" onclick="addToCart('Bélier reproducteur', 90000)">+ Ajouter</button></div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">
+        <img src="xuvwt2uyu3.jpg" alt="Mouton de fête" loading="lazy"/>
+        <span class="product-badge limited">Sur commande</span>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Mouton de fête</div>
+        <div class="product-desc">Mouton engraissé, disponible pour les grandes célébrations et cérémonies.</div>
+        <div class="product-footer"><span class="product-price">80 000 FCFA</span><button class="btn-add" onclick="addToCart('Mouton de fête', 80000)">+ Ajouter</button></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ENGAGEMENT -->
+<div class="engagement-section">
+  <div class="engagement-inner">
+    <img src="https://i.ibb.co/sJbLVmRJ/IMG-2131-JPG.jpg" alt="Élevage Saboplume" loading="lazy"/>
+    <div>
+      <span class="section-label">Notre Engagement</span>
+      <h2 class="section-title">L'élevage <em>autrement</em></h2>
+      <p class="section-desc">Un savoir-faire local, au service de la qualité</p>
+      <div class="engagement-points">
+        <div class="engagement-point"><div class="ep-num">1</div><h4>Qualité sanitaire</h4><p>Chaque animal est suivi selon des standards rigoureux.</p></div>
+        <div class="engagement-point"><div class="ep-num">2</div><h4>Sélection rigoureuse</h4><p>Seuls les meilleurs sujets intègrent notre sélection.</p></div>
+        <div class="engagement-point"><div class="ep-num">3</div><h4>Bien-être animal</h4><p>Alimentation, eau fraîche, abri propre et soins adaptés.</p></div>
+        <div class="engagement-point"><div class="ep-num">4</div><h4>Relation directe</h4><p>Du producteur à vous, sans intermédiaire.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TRAITEUR -->
+<section id="traiteur">
+  <div style="text-align:center;margin-bottom:3rem;">
+    <span class="section-label">Services</span>
+    <h2 class="section-title">Traiteur & Location <em>Événementielle</em></h2>
+    <p class="section-desc">Célébrer avec excellence — Saboplume vous accompagne de A à Z</p>
+  </div>
+
+  <div class="service-section">
+    <div>
+      <img src="https://i.ibb.co/HD9jRr17/IMG-2130-JPG.jpg" alt="Traiteur Saboplume" loading="lazy" style="border-radius:20px;width:100%;aspect-ratio:3/2;object-fit:cover;"/>
+    </div>
+    <div>
+      <h3 style="font-size:1.6rem;margin-bottom:0.75rem;">Saboplume Traiteur</h3>
+      <p style="color:var(--text-light);margin-bottom:1.5rem;">Mariages, baptêmes, anniversaires, réceptions d'entreprise. Nous gérons tout.</p>
+      <div class="service-form">
+        <h4>📋 Demander un devis Traiteur</h4>
+        <div class="form-row">
+          <div class="form-group"><label>Votre nom *</label><input type="text" id="traiteurNom" placeholder="Prénom et nom" required /></div>
+          <div class="form-group"><label>Téléphone *</label><input type="tel" id="traiteurTel" placeholder="+236 XX XX XX XX" required /></div>
+        </div>
+        <div class="form-group">
+          <label>Type d'événement *</label>
+          <select id="traiteurType">
+            <option value="">Choisir...</option>
+            <option>Mariage</option><option>Baptême</option><option>Anniversaire</option>
+            <option>Réception d'entreprise</option><option>Conférence</option><option>Autre</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Date de l'événement *</label><input type="date" id="traiteurDate" required /></div>
+          <div class="form-group"><label>Nombre de personnes</label><input type="number" id="traiteurNbr" placeholder="ex: 100" min="1" /></div>
+        </div>
+        <div class="form-group"><label>Détails supplémentaires</label><textarea id="traiteurDetails" rows="2" placeholder="Menu souhaité, lieu, budget..."></textarea></div>
+        <button class="btn-submit" onclick="envoyerDevisTraiteur()">Envoyer ma demande →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCATION ÉVÉNEMENTIELLE ===================== -->
+<section id="location" style="padding-top:0;">
+  <div style="text-align:center;margin-bottom:2.5rem;">
+    <span class="section-label">Location Événementielle</span>
+    <h2 class="section-title">Tout le matériel pour <em>votre événement</em></h2>
+    <p class="section-desc">Livraison et reprise incluses. Disponible 7j/7 sur réservation.</p>
+  </div>
+
+  <!-- TABS DE RÉSERVATION -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" id="locationSection">
+    <div>
+      <div class="location-tabs">
+        <button class="tab-btn active" onclick="switchTab('chaises', this)">🪑 Chaises</button>
+        <button class="tab-btn" onclick="switchTab('tentes', this)">⛺ Tentes</button>
+        <button class="tab-btn" onclick="switchTab('tables', this)">🪵 Tables</button>
+        <button class="tab-btn" onclick="switchTab('pack', this)">📦 Pack</button>
+      </div>
+
+      <div class="tab-panel active" id="tab-chaises">
+        <div class="service-form">
+          <h4>🪑 Réserver des chaises</h4>
+          <div class="price-display"><span class="label">Tarif unitaire</span><span class="value">300 FCFA / chaise</span></div>
+          <div class="form-row">
+            <div class="form-group"><label>Votre nom *</label><input type="text" id="chaisesNom" placeholder="Votre nom" required /></div>
+            <div class="form-group"><label>Téléphone *</label><input type="tel" id="chaisesTel" placeholder="+236 XX XX XX XX" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Date *</label><input type="date" id="chaisesDate" required /></div>
+            <div class="form-group"><label>Nombre de chaises *</label><input type="number" id="chaisesQty" placeholder="0" min="1" oninput="calcChaises()" /></div>
+          </div>
+          <div class="total-block" id="chaisesTotal"><span class="label">Total estimé</span><span class="value" id="chaisesTotalVal">0 FCFA</span></div>
+          <button class="btn-submit" onclick="reserverChaises()">Réserver →</button>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-tentes">
+        <div class="service-form">
+          <h4>⛺ Réserver des tentes</h4>
+          <div class="form-row">
+            <div class="form-group"><label>Votre nom *</label><input type="text" id="tentesNom" placeholder="Votre nom" required /></div>
+            <div class="form-group"><label>Téléphone *</label><input type="tel" id="tentesTel" placeholder="+236 XX XX XX XX" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Date *</label><input type="date" id="tentesDate" required /></div>
+            <div class="form-group"><label>Nombre de tentes</label><input type="number" id="tentesQty" placeholder="0" min="1" /></div>
+          </div>
+          <div class="form-group">
+            <label>Taille des tentes</label>
+            <select id="tentesTaille"><option value="">Choisir...</option><option>Petite (4x4m)</option><option>Moyenne (6x6m)</option><option>Grande (8x8m)</option></select>
+          </div>
+          <button class="btn-submit" onclick="reserverTentes()">Demander un devis →</button>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-tables">
+        <div class="service-form">
+          <h4>🪵 Réserver des tables</h4>
+          <div class="price-display"><span class="label">Tarif unitaire</span><span class="value">500 FCFA / table</span></div>
+          <div class="form-row">
+            <div class="form-group"><label>Votre nom *</label><input type="text" id="tablesNom" placeholder="Votre nom" required /></div>
+            <div class="form-group"><label>Téléphone *</label><input type="tel" id="tablesTel" placeholder="+236 XX XX XX XX" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Date *</label><input type="date" id="tablesDate" required /></div>
+            <div class="form-group"><label>Nombre de tables *</label><input type="number" id="tablesQty" placeholder="0" min="1" oninput="calcTables()" /></div>
+          </div>
+          <div class="form-group">
+            <label>Type de table</label>
+            <select id="tablesType"><option value="">Choisir...</option><option>Table rectangulaire 6 personnes</option><option>Table ronde 8 personnes</option><option>Table cocktail haute</option></select>
+          </div>
+          <div class="total-block" id="tablesTotal"><span class="label">Total estimé</span><span class="value" id="tablesTotalVal">0 FCFA</span></div>
+          <button class="btn-submit" onclick="reserverTables()">Réserver →</button>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-pack">
+        <div class="service-form">
+          <h4>📦 Pack Complet</h4>
+          <p style="font-size:0.82rem;color:var(--text-light);margin-bottom:1rem;">Combine plusieurs équipements. Tarif avantageux sur les packs.</p>
+          <div class="form-row">
+            <div class="form-group"><label>Votre nom *</label><input type="text" id="packNom" placeholder="Votre nom" required /></div>
+            <div class="form-group"><label>Téléphone *</label><input type="tel" id="packTel" placeholder="+236 XX XX XX XX" required /></div>
+          </div>
+          <div class="form-group"><label>Date de l'événement *</label><input type="date" id="packDate" required /></div>
+          <div class="form-row">
+            <div class="form-group"><label>Nb chaises</label><input type="number" id="packChaises" placeholder="0" min="0" /></div>
+            <div class="form-group"><label>Nb tentes</label><input type="number" id="packTentes" placeholder="0" min="0" /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Nb tables</label><input type="number" id="packTables" placeholder="0" min="0" /></div>
+            <div class="form-group"><label>Sono / Groupes</label><input type="number" id="packSono" placeholder="0" min="0" /></div>
+          </div>
+          <button class="btn-submit" onclick="reserverPack()">Demander un devis →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="location-images">
+      <img src="https://i.ibb.co/kFLqBJ1/Whats-App-Image-2026-02-21-at-12-15-43.jpg" alt="Chaises location" loading="lazy"/>
+      <img src="https://i.ibb.co/BHV7y0HS/Whats-App-Image-2026-02-22-at-17-28-35.jpg" alt="Tentes location" loading="lazy"/>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOGUE LOCATION -->
+<div class="location-catalogue">
+
+  <div class="location-cat-title">🪑 Mobilier de réception</div>
+  <div class="location-grid">
+    <div class="loc-card">
+
+      <div class="loc-card-body">
+        <div class="loc-card-name">Chaise plastique</div>
+        <img src="images.jpeg" alt="Chaise plastique" loading="lazy" style="width:100%;border-radius:8px;margin:0.5rem 0;"/>
+        <div class="loc-card-desc">Chaise empilable robuste, disponible en blanc ou coloré. Idéale pour tout type d'événement.</div>
+        <div class="loc-card-price">300 FCFA / unité</div>
+        <button class="btn-loc" onclick="switchToTab('chaises')">Réserver</button>
+      </div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-card-body">
+        <div class="loc-card-name">Chaise Tiffany</div>
+        <img src="Gold-chiavari-chair-mp4.webp" alt="Chaise Tiffany" loading="lazy" style="width:100%;border-radius:8px;margin:0.5rem 0;"/>
+        <div class="loc-card-desc">Chaise élégante en résine transparente ou dorée. Parfaite pour mariages et cérémonies.</div>
+        <div class="loc-card-price">600 FCFA / unité</div>
+        <button class="btn-loc" onclick="switchToTab('chaises')">Réserver</button>
+      </div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-card-body">
+        <div class="loc-card-name">Table rectangulaire</div>
+        <img src="232_1-Table-a-Manger-Rectangulaire-New-Legende-Amadeus-Cades-Deco-Campagne-Chic.jpeg" alt="Table rectangulaire" loading="lazy" style="width:100%;border-radius:8px;margin:0.5rem 0;"/>
+        <div class="loc-card-desc">Table solide pour 6 personnes. Nappe blanche fournie sur demande.</div>
+        <div class="loc-card-price">500 FCFA / unité</div>
+        <button class="btn-loc" onclick="switchToTab('tables')">Réserver</button>
+      </div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-card-body">
+        <div class="loc-card-name">Table ronde</div>
+        <img src="table-a-manger-ronde-extensible-effet-bois-100140-cm-marius.jpg" alt="Table ronde" loading="lazy" style="width:100%;border-radius:8px;margin:0.5rem 0;"/>
+        <div class="loc-card-desc">Table ronde conviviale pour 8 personnes. Idéale pour les dîners de gala et mariages.</div>
+        <div class="loc-card-price">700 FCFA / unité</div>
+        <button class="btn-loc" onclick="switchToTab('tables')">Réserver</button>
+      </div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-card-body">
+        <div class="loc-card-name">Table cocktail haute</div>
+        <img src="images (1).jpeg" alt="Table cocktail" loading="lazy" style="width:100%;border-radius:8px;margin:0.5rem 0;"/>
+        <div class="loc-card-desc">Table haute pour cocktails et buffets. Style moderne, parfaite pour les réceptions debout.</div>
+        <div class="loc-card-price">1 000 FCFA / unité</div>
+        <button class="btn-loc" onclick="switchToTab('tables')">Réserver</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="location-cat-title">⛺ Tentes & Structures</div>
+  <div class="location-grid">
+    <div class="loc-card">
+      <div class="loc-card-body">
+        <div class="loc-card-name">Tente 4×4m</div>
+        <img src="media.webp" alt="Tente 4x4m" loading="lazy" style="width:100%;border-radius:8px;margin:0.5rem 0;"/>
+        <div class="loc-card-desc">Petite tente pliable, idéale pour les abris de petits stands ou buffets.</div>
+        <div class="loc-card-price">Sur devis</div>
+        <button class="btn-loc" onclick="switchToTab('tentes')">Réserver</button>
+      </div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-card-body">
+        <div class="loc-card-name">Tente 6×6m</div>
+        <img src="images (2).jpeg" alt="Tente 6x6m" loading="lazy" style="width:100%;border-radius:8px;margin:0.5rem 0;"/>
+        <div class="loc-card-desc">Tente moyenne pour 30–50 personnes. Idéale pour anniversaires et réceptions familiales.</div>
+        <div class="loc-card-price">Sur devis</div>
+        <button class="btn-loc" onclick="switchToTab('tentes')">Réserver</button>
+      </div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-card-body">
+        <div class="loc-card-name">Tente 8×8m</div>
+        <img src="HLB1XDEIRrrpK1RjSZTEq6AWAVXao.avif" alt="Tente 8x8m" loading="lazy" style="width:100%;border-radius:8px;margin:0.5rem 0;"/>
+        <div class="loc-card-desc">Grande tente pour 80–120 personnes. Parfaite pour mariages, conférences et grands rassemblements.</div>
+        <div class="loc-card-price">Sur devis</div>
+        <button class="btn-loc" onclick="switchToTab('tentes')">Réserver</button>
+      </div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-card-body">
+        <div class="loc-card-name">Éclairage de tente</div>
+        <img src="Location-tente-nomade.webp" alt="Éclairage de tente" loading="lazy" style="width:100%;border-radius:8px;margin:0.5rem 0;"/>
+        <div class="loc-card-desc">Guirlandes lumineuses et spots LED pour décorer et éclairer vos tentes et espaces.</div>
+        <div class="loc-card-price">Sur devis</div>
+        <button class="btn-loc" onclick="switchToTab('pack')">Réserver</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="location-cat-title">🔊 Sono & Équipements</div>
+  <div class="location-grid">
+    <div class="loc-card">
+      <div class="loc-card-body">
+        <div class="loc-card-name">Sono complète</div>
+        <img src="1.jpg" alt="Système de sonorisation complète">
+        <div class="loc-card-desc">Système de sonorisation complet avec enceintes, ampli et câbles. Parfait pour petits et moyens événements.</div>
+        <div class="loc-card-price">Sur devis</div>
+        <button class="btn-loc" onclick="switchToTab('pack')">Réserver</button>
+      </div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-card-body">
+        <div class="loc-card-name">Microphones</div>
+        <img src="images (3).jpeg" alt="Microphones" loading="lazy" style="width:100%;border-radius:8px;margin:0.5rem 0;"/>
+        <div class="loc-card-desc">Micros avec ou sans fil pour discours, animation et cérémonies.</div>
+        <div class="loc-card-price">Sur devis</div>
+        <button class="btn-loc" onclick="switchToTab('pack')">Réserver</button>
+      </div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-card-body">
+        <div class="loc-card-name">Groupe électrogène</div>
+        <img src="images (4).jpeg" alt="Groupe électrogène" loading="lazy" style="width:100%;border-radius:8px;margin:0.5rem 0;"/>
+        <div class="loc-card-desc">Générateur électrique fiable pour alimenter votre événement en cas de coupure ou lieu isolé.</div>
+        <div class="loc-card-price">Sur devis</div>
+        <button class="btn-loc" onclick="switchToTab('pack')">Réserver</button>
+      </div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-card-body">
+        <div class="loc-card-name">Vaisselle & Couverts</div>
+        <img src="afina-plate-with-salmon-cucumber-salad.webp" alt="Vaisselle & Couverts" loading="lazy" style="width:100%;border-radius:8px;margin:0.5rem 0;"/>
+        <div class="loc-card-desc">Assiettes, verres, couverts et nappes disponibles à la location pour vos buffets et dîners.</div>
+        <div class="loc-card-price">Sur devis</div>
+        <button class="btn-loc" onclick="switchToTab('pack')">Réserver</button>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- TÉMOIGNAGES -->
+<section id="temoignages">
+  <div class="temoignages-header">
+    <span class="section-label">Témoignages</span>
+    <h2 class="section-title">Ce que disent nos <em>clients</em></h2>
+    <div class="rating-global">⭐ 4.8 / 5 · Note Globale</div>
+  </div>
+  <div class="temoignages-grid" id="temoignages-grid"></div>
+  <div class="temoignage-nav">
+    <button class="temo-nav-btn" onclick="prevTemo()">←</button>
+    <button class="temo-nav-btn" onclick="nextTemo()">→</button>
+  </div>
+  <div class="avis-form-section">
+    <h3>Laisser un avis</h3>
+    <p>Vous avez utilisé nos services ? Partagez votre expérience !</p>
+    <div class="form-row">
+      <div class="form-group"><label>Votre prénom *</label><input type="text" id="avisNom" placeholder="Votre prénom" /></div>
+      <div class="form-group"><label>Service utilisé *</label><select id="avisService"><option value="">Choisir...</option><option>Produits Fermiers</option><option>Traiteur</option><option>Location</option></select></div>
+    </div>
+    <label style="font-size:0.82rem;font-weight:600;display:block;margin-bottom:6px;">Note *</label>
+    <div class="star-rating">
+      <input type="radio" name="rating" id="s5" value="5"><label for="s5">★</label>
+      <input type="radio" name="rating" id="s4" value="4"><label for="s4">★</label>
+      <input type="radio" name="rating" id="s3" value="3"><label for="s3">★</label>
+      <input type="radio" name="rating" id="s2" value="2"><label for="s2">★</label>
+      <input type="radio" name="rating" id="s1" value="1"><label for="s1">★</label>
+    </div>
+    <div class="form-group" style="margin-top:12px;"><label>Votre avis *</label><textarea id="avisText" rows="3" placeholder="Décrivez votre expérience avec Saboplume..."></textarea></div>
+    <button class="btn-submit" onclick="publierAvis()">Publier mon avis →</button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div style="margin-bottom:3rem;"><span class="section-label">Contact</span><h2 class="section-title">Nous trouver & <em>commander</em></h2></div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <a class="contact-item" href="https://maps.google.com/?q=4.3388,18.4699" target="_blank" rel="noopener">
+        <div class="icon">📍</div><div><div class="label">Adresse</div><strong>Bimbo — Rue du Général Gambi</strong></div>
+      </a>
+      <div class="contact-item"><div class="icon">🕐</div><div><div class="label">Horaires</div><strong>Tous les jours · 8h — 17h</strong></div></div>
+      <a class="contact-item" href="tel:+23674225757"><div class="icon">📞</div><div><div class="label">Téléphone</div><strong>+236 75422584</strong></div></a>
+      <a class="contact-item" href="mailto:saboplume@outlook.fr"><div class="icon">✉️</div><div><div class="label">Email</div><strong>saboplume@outlook.fr</strong></div></a>
+      <div class="socials">
+        <a class="social-btn" href="https://www.facebook.com/share/1ArfaX1XMn/" target="_blank">📘 Facebook</a>
+        <a class="social-btn" href="https://www.tiktok.com/@saboplume" target="_blank">🎵 TikTok</a>
+        <a class="social-btn" href="https://www.instagram.com/saboplume" target="_blank">📷 Instagram</a>
+        <a class="social-btn" href="https://wa.me/23675422584" target="_blank">💬 WhatsApp</a>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:4px;">
+        <a href="https://drive.google.com/file/d/1CldPDFeN7rNIADHHmC-1I9nquE9eiHah/view?usp=sharing" target="_blank" class="social-btn">📄 Charte entreprise</a>
+        <a href="https://drive.google.com/file/d/1YtWUBT_GFzitVkfCOQWoTE3xaa2Gcsvt/view?usp=sharing" target="_blank" class="social-btn">📋 Portfolio</a>
+      </div>
+    </div>
+    <div class="how-order">
+      <h3>Comment commander ?</h3>
+      <div class="order-steps">
+        <div class="order-step"><div class="os-icon">💻</div><div><h4>En ligne</h4><p>Commandez depuis notre site, via nos réseaux sociaux ou par email</p></div></div>
+        <div class="order-step"><div class="os-icon">🏪</div><div><h4>Sur place</h4><p>Bimbo, Rue du Général Gambi — tous les jours de 8h à 17h.</p></div></div>
+        <div class="order-step"><div class="os-icon">📅</div><div><h4>Sur rendez-vous</h4><p>Pour un conseil personnalisé ou une commande spéciale.</p></div></div>
+        <div class="order-step"><div class="os-icon">🚗</div><div><h4>Livraison disponible</h4><p>Tarifs selon la distance — contactez-nous pour un devis.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <img src="https://i.ibb.co/C3NkLpLY/logo-officiel-saboplume.png" alt="Saboplume" style="height:48px;margin:0 auto 1rem;border-radius:8px;" />
+    <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;">« À vos côtés pour chaque occasion »</p>
+    <div class="footer-links">
+      <a href="#produits">Produits Fermiers</a>
+      <a href="#traiteur">Traiteur</a>
+      <a href="#location">Location Événementielle</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p class="copyright">© 2025 Saboplume EURL · Bimbo, République Centrafricaine</p>
+  </div>
+</footer>
+
+<!-- WA FLOAT -->
+<a class="wa-float" href="https://wa.me/23675422584" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <span class="wa-tooltip">Nous écrire sur WhatsApp</span>💬
+</a>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- PANIER -->
+<div class="overlay" id="cartOverlay" onclick="closeCart(event)">
+  <div class="panel" onclick="event.stopPropagation()">
+    <div class="panel-header"><h3>🛒 Mon Panier</h3><button class="btn-close" onclick="closeCart()">✕</button></div>
+    <div id="cartItems"><div class="cart-empty">Votre panier est vide</div></div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total"><span class="cart-total-label">Total</span><span class="cart-total-price" id="cartTotalPrice">0 FCFA</span></div>
+      <button class="btn-order-nav" style="width:100%;padding:12px;border-radius:12px;" onclick="closeCart();openCommander()">Commander →</button>
+    </div>
+  </div>
+</div>
+
+<!-- COMMANDER MODAL -->
+<div class="modal-overlay" id="commanderModal" onclick="closeCommander(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div id="commanderContent">
+      <div class="panel-header" style="margin-bottom:0.5rem;"><h2>Commander</h2><button class="btn-close" onclick="closeCommander()">✕</button></div>
+      <p class="sub">Choisissez comment nous envoyer votre commande</p>
+      <div class="modal-section">
+        <div class="modal-section-title">Vos coordonnées</div>
+        <div class="form-group"><label>Votre nom *</label><input type="text" id="cmdNom" placeholder="Prénom et nom" /></div>
+        <div class="form-group"><label>Téléphone *</label><input type="tel" id="cmdTel" placeholder="+236 XX XX XX XX" /></div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Mode de réception</div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="reception" value="livraison" checked /> 🚗 Me faire livrer</label>
+          <label class="option-label"><input type="radio" name="reception" value="surplace" /> 🏪 Venir chercher · Bimbo, Rue du Général Gambi</label>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Mode de paiement</div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="paiement" value="especes" checked /> 💵 Paiement en espèces</label>
+          <label class="option-label"><input type="radio" name="paiement" value="orange" /> 📱 Orange Money</label>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Envoyer via</div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="envoi" value="whatsapp" checked /> 📱 WhatsApp</label>
+          <label class="option-label"><input type="radio" name="envoi" value="email" /> ✉️ Email</label>
+        </div>
+      </div>
+      <button class="confirm-btn" onclick="confirmerCommande()">Confirmer ma commande →</button>
+    </div>
+    <div class="success-msg" id="successMsg" style="display:none;">
+      <div class="check">✅</div>
+      <h2>Merci pour votre commande !</h2>
+      <p>Votre commande a bien été transmise.<br/>Nous vous recontacterons très bientôt.</p>
+      <button class="btn-primary" onclick="closeCommander()">Fermer</button>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT MODAL -->
+<div class="modal-overlay" id="contactModal" onclick="closeContactModal(event)">
+  <div class="contact-modal" onclick="event.stopPropagation()">
+    <div class="panel-header" style="margin-bottom:1rem;"><h3>Nous contacter</h3><button class="btn-close" onclick="closeContactModal()">✕</button></div>
+    <p style="font-size:0.875rem;color:var(--text-light);margin-bottom:1rem;">Choisissez votre moyen de contact préféré :</p>
+    <a class="contact-option" href="https://wa.me/23675422584" target="_blank"><span class="icon">📱</span><div><strong>WhatsApp</strong><br/><span style="font-size:0.8rem;color:var(--text-light);">+236 75 42 25 84</span></div></a>
+    <a class="contact-option" href="mailto:saboplume@outlook.fr"><span class="icon">✉️</span><div><strong>Email</strong><br/><span style="font-size:0.8rem;color:var(--text-light);">saboplume@outlook.fr</span></div></a>
+  </div>
+</div>
+</body>
+</html>
